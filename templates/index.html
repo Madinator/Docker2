@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Here we go</title>
+</head>
+<body>
+    <center>
+        <form method="post" action="/send" enctype="multipart/form-data">
+            <br>
+            <h3>Please,paste your XML file</h3>
+            <input name="uploaded_data" type="file" required=required style="margin:30px">
+            <br>
+            <h2>Please select format:</h2>
+            <input type="radio" id="html" name="format" value="html" checked="checked">
+            <label for="html">html</label><br>
+            <input type="radio" id="pdf" name="format" value="pdf">
+            <label for="pdf">pdf</label><br>
+            <input type="submit" value="Convert" style="margin:30px">
+            <br>
+        </form>
+    </center>
+</body>
+</html>

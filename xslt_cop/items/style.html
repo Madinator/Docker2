@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+<xsl:template name="style">
+
+<style type="text/css">
+
+
+
+
+body {
+    font-family: Calibri, Tahoma, Arial, sans-serif;
+    font-size: 9pt;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    width: 27.7cm;
+
+
+}
+
+@media screen {
+    html {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        background: #eee;
+    }
+
+    body {
+        text-align: left;
+        margin: 0 auto;
+        background: #fff;
+        padding: 5px;
+        box-shadow: 0 0 3px gray;
+    }
+}
+
+table {
+    width: 100%;
+    text-align: left;
+    border-spacing: 0;
+    border-collapse: collapse;
+    font-size: 9pt
+}
+
+table
+            td, table th {
+    vertical-align: top;
+    padding: 0px;
+}
+
+.bordered td, .bordered th {
+    border: 1px solid #B1B1B1;
+    border-collapse: separate
+}
+
+.bordered td, .bordered th {
+    padding: 5px 10px
+}
+
+td p {
+    margin: 0
+}
+
+p {
+    margin: 5px 0
+}
+
+.right {
+    float: right;
+    text-align: right;
+}
+
+.left {
+    float: left;
+}
+
+.report_type {
+    color: #4F81BD;
+    font-size: 13pt;
+    font-weight: 700;
+    margin-top: 0;
+}
+
+.subject_id {
+    font-size: 18pt;
+    font-weight: bold;
+    color: #4F81BD;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.report_date {
+    margin-top: 0;
+    color: #666;
+}
+
+.title {
+    font-size: 11pt;
+    font-weight: 700;
+    color: #4F81BD;
+}
+
+.mini-title {
+    font-size: 11pt;
+    font-weight: 700;
+    color: #4F81BD;
+    background: #fff;
+    padding: 5px 0 5px 50px;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+}
+
+.small-title {
+    text-align: center;
+    color: #4F81BD;
+    font-weight: 700
+}
+
+.bordered.calendar
+            td, .bordered.calendar
+            th {
+    padding: 5px;
+    text-align: center
+}
+
+.row_5 {
+    width: 5%
+}
+
+.row_10 {
+    width: 10%
+}
+
+.row_15 {
+    width: 15%
+}
+
+.row_20 {
+    width: 20%
+}
+
+.row_30 {
+    width: 30%
+}
+
+.row_40 {
+    width: 40%
+}
+
+.blue {
+    color: #4F81BD;
+    font-weight: 700
+}
+
+th {
+    font-weight: 700
+}
+
+hr {
+    width: 100%;
+    margin-top: 20px
+}
+
+.logo {
+}
+
+.data_row
+            td, .data_row th {
+    padding: 3px;
+    vertical-align: middle;
+}
+
+.h_tr th, .h_tr td {
+    vertical-align: bottom !important;
+    background: #fff;
+    padding-bottom: 5px;
+}
+
+.blue {
+    color: #4F81BD;
+    font-weight: 700
+}
+
+.odd
+            td, .odd th {
+    background: #ededfd;
+}
+
+.bg {
+    background: #fafafd;
+}
+
+@page {
+    size: A4 landscape;
+    margin: 2.5cm 1cm 1cm 1cm;
+    padding: 0;
+
+    @top-center { content: element(header) } ;
+    @bottom-center { content: element(footer) } ;
+}
+
+@media print {
+    @page {
+        size: A4 landscape;
+        margin: 2.5cm 1cm 1cm 1cm;
+        padding: 0;
+        @top-center { content: element(header) } ;
+        @bottom-center { content: element(footer) } ;
+    }
+
+    .hide-on-print {
+        display: none;
+    }
+}
+
+div.header {
+    display: block;
+    position: running(header);
+}
+
+div.footer {
+    display: block;
+    position: absolute; top: -100px; left: 0;
+    position: running(footer);
+}
+
+div.footer:after {
+    content: " Страница " counter(page) " из " counter(pages) " ";
+    float: right;
+    text-align: right;
+}
+
+.title_row .title {
+    background: #f3f3f3;
+    padding: 5px 9px;
+    margin-bottom: 3px;
+}
+
+.content_row {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-bottom: none;
+}
+
+.space {
+    padding-top: 10px;
+    padding-bottom: 14px;
+}
+
+.clearfix {
+    clear: both;
+}
+
+div.photos {
+    width: 3cm;
+    height: 4cm;
+    border: 1px solid #ccc;
+    margin: 5px auto;
+}
+
+    .text-center {
+        text-align: center;
+    }
+
+</style>
+
+</xsl:template>
+
+</xsl:stylesheet>
